@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PhotoModal from "../components/PhotoModal";
+import Footer from "../components/Footer";
 import { ArrowLeft } from "lucide-react";
 
 const KhawtangPage = () => {
@@ -150,6 +151,9 @@ const KhawtangPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
 
       {/* Photo Modal */}
       {selectedPhoto && (
