@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 interface Photo {
   url: string;
   alt: string;
@@ -8,6 +10,7 @@ interface Cat {
   name: string;
   description: string;
   photos: Photo[];
+  slug: string;
 }
 
 interface CatCardProps {
@@ -23,7 +26,16 @@ const CatCard = ({ cat, onPhotoClick, reverse = false }: CatCardProps) => {
       <div className="lg:w-1/3 text-center lg:text-left">
         <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
           <h3 className="text-3xl font-bold text-orange-800 mb-4">{cat.name}</h3>
-          <p className="text-orange-600 text-lg leading-relaxed">{cat.description}</p>
+          <p className="text-orange-600 text-lg leading-relaxed mb-6">{cat.description}</p>
+          
+          {/* Link to individual cat page */}
+          <Link 
+            to={`/${cat.slug}`}
+            className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 mb-4"
+          >
+            ดูข้อมูลเพิ่มเติม
+          </Link>
+          
           <div className="flex justify-center lg:justify-start mt-6">
             <div className="flex space-x-1">
               {[...Array(5)].map((_, i) => (

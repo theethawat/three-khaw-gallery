@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import CatCard from "../components/CatCard";
 import PhotoModal from "../components/PhotoModal";
@@ -14,6 +15,7 @@ const Index = () => {
     {
       name: "ข้าวตัง - Khawtang",
       description: "แมวตัวดีสีขาว ขี้กวน นาฬิกาปลุกเดินได้",
+      slug: "khawtang",
       photos: [
         {
           url: "https://tdckhawtang.blob.core.windows.net/cat/khawtang/1662948053677.jpg",
@@ -32,6 +34,7 @@ const Index = () => {
     {
       name: "ข้าวเหนียวปิ้ง - Khawniewping",
       description: "แมวอ้วนนิ่งๆ ที่ชอบนอนอยู่บนตัก",
+      slug: "khawniewping",
       photos: [
         {
           url: "https://tdckhawtang.blob.core.windows.net/cat/khawniewping/1662948053347.jpg",
@@ -50,6 +53,7 @@ const Index = () => {
     {
       name: "ข้าวหลาม - Khawlahm",
       description: "แมววัวตัวใหญ่ ที่ชอบเลียเป็นชีวิตจิตใจ",
+      slug: "khawlahm",
       photos: [
         {
           url: "https://tdckhawtang.blob.core.windows.net/cat/khawlahm/1673924996822.jpg",
